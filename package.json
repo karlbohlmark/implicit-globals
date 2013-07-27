@@ -1,0 +1,20 @@
+{
+  "name": "implicit-globals",
+  "version": "0.0.0",
+  "description": "Extract implicit globals from js ast or string",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": {
+    "name": "Karl Böhlmark",
+    "email": "karl.bohlmark@gmail.com"
+    },
+  "license": "BSD",
+  "dependencies": {
+    "astw": "0.0.0"
+  },
+  "devDependencies": {
+    "acorn": "~0.3.1"
+  }
+}
