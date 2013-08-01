@@ -7,3 +7,4 @@ function fun(p) {
 }
 
 
+stuff.inner.run()

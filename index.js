@@ -10,6 +10,7 @@ function globals (ast) {
 
 	walk(function (node) {
 		if (node.type != 'Identifier') return;
+		if (node.parent.type == 'MemberExpression' && node.parent.object != node) return;
 		if (parentDeclares(node.parent, node.name)) return;
 		if (glbls.indexOf(node.name) != -1) return;
 		
