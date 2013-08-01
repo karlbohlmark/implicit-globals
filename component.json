@@ -4,7 +4,9 @@
   "description": "Get implicit globals of js snippet",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "karlbohlmark/astw": "*"
+  },
   "development": {},
   "license": "MIT",
   "main": "index.js",
