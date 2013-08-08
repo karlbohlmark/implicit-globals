@@ -10,8 +10,8 @@ function globals (ast) {
 
 	walk(function (node) {
 		if (node.type != 'Identifier') return;
-		if (node.parent.type == 'MemberExpression' && node.parent.object != node) return;
-		if (parentDeclares(node.parent, node.name)) return;
+		if (node.parent && (node.parent.type == 'MemberExpression' && node.parent.object != node)) return;
+		if (node.parent && nodeDeclares(node.parent, node.name)) return;
 		if (glbls.indexOf(node.name) != -1) return;
 		
 		glbls.push(node.name);
@@ -59,12 +59,12 @@ function annotateForStatement (node) {
 	}
 }
 
-function parentDeclares (node, name) {
+function nodeDeclares (node, name) {
 	if (node._declarations && node._declarations.indexOf(name)!=-1) {
 		return true;
 	}
 
 	if (!node.parent) return false;
 
-	return parentDeclares(node.parent, name) 
+	return nodeDeclares(node.parent, name) 
 }
