@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "karlbohlmark/astw": "*"
+    "karlbohlmark/astw": "0.0.2"
   },
   "development": {},
   "license": "MIT",
